@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CabeceroComponent } from './cabecero/cabecero.component';
 import { IngresoComponent } from './ingreso/ingreso.component';
+import { EgresoComponent } from './egreso/egreso.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabeceroComponent,
-    IngresoComponent
+    IngresoComponent,
+    EgresoComponent
   ],
   imports: [
     BrowserModule
