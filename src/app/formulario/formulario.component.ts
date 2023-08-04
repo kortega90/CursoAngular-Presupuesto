@@ -24,7 +24,7 @@ export class FormularioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  agregarNovo(descripcion:HTMLInputElement, valor:HTMLInputElement){
+  agregarNovo(descripcion:HTMLInputElement, valor:HTMLInputElement, select:HTMLInputElement){
     this.ingresoService.agregarIngreso(new Ingreso(descripcion.value,Number(valor.value)));
     console.log(descripcion + " " + valor);
   }

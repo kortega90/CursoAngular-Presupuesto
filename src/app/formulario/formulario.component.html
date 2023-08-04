@@ -2,7 +2,7 @@
   <div class="agregar">
     <div class="agregar_contenedor">
 
-      <select>
+      <select #select>
         <option value="ing" selected>+</option>
         <option value="egr">-</option>
       </select>
@@ -13,8 +13,7 @@
         id="descripcion"
         class="agregar_descripcion"
         placeholder="Agregar Descripción"
-      
-        #descripcion
+         #descripcion
       />
 
       <input
@@ -29,7 +28,7 @@
       <button
         class="agregar_btn"
         type="submit"
-        (click)="agregarNovo(descripcion,valor )"
+        (click)="agregarNovo(descripcion,valor,select )"
       >
         <i class="ion-ios-checkmark-outline"></i>
       </button>
