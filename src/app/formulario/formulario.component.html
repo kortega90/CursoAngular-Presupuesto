@@ -1,0 +1,39 @@
+<form>
+  <div class="agregar">
+    <div class="agregar_contenedor">
+
+      <select>
+        <option value="ing" selected>+</option>
+        <option value="egr">-</option>
+      </select>
+
+      <input
+        type="text"
+        name="descripcion"
+        id="descripcion"
+        class="agregar_descripcion"
+        placeholder="Agregar Descripción"
+      
+        #descripcion
+      />
+
+      <input
+        type="number"
+        class="agregar_valor"
+        placeholder="Valor"
+        nome="valor"
+        id="valor"
+        #valor
+      />
+
+      <button
+        class="agregar_btn"
+        type="submit"
+        (click)="agregarNovo(descripcion,valor )"
+      >
+        <i class="ion-ios-checkmark-outline"></i>
+      </button>
+    </div>
+  </div>
+</form>
+
