@@ -11,21 +11,34 @@ import { Ingreso } from '../ingreso/ingreso.model';
 })
 export class FormularioComponent implements OnInit {
 
-  // descripcion!: string;
-  // valor!: number;
-  icone = document.getElementById('lista-conteudos');;
+  descripcion: string = '';
+  valor!:number;
+  tipo:String = "ing";
+
 
   constructor(
     private ingresoService: IngresoService,
     private egresoService: EgresoService
-  ) { 
-  }
+  ) { }
 
   ngOnInit(): void {
   }
 
-  agregarNovo(descripcion:HTMLInputElement, valor:HTMLInputElement, select:HTMLInputElement){
-    this.ingresoService.agregarIngreso(new Ingreso(descripcion.value,Number(valor.value)));
-    console.log(descripcion + " " + valor);
+  agregarNovo(){
+  console.log(this.valor)
+
+    if (this.tipo === "ing"){
+      this.ingresoService.ingresos.push(new Ingreso(this.descripcion,this.valor));
+      
+    }
+   else{
+    this.egresoService.egresos.push(new Ingreso(this.descripcion,this.valor));
+   }
+  
+  }
+
+  tipoOperacion(event:any){
+
+   this.tipo = event.target.value;
   }
 }

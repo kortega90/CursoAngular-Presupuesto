@@ -8,14 +8,11 @@
 
 <app-formulario></app-formulario>
 
-<div class="contenedor limpiarEstilos" style="display: flex">
-  <div>
+<div class="contenedor limpiarEstilos" >
+ 
     <app-ingreso></app-ingreso>
-  </div>
-
-  <div>
     <app-egreso
     [sumEgresos]="getEgresoTotal()"
     ></app-egreso>
-  </div>
+
 </div>
